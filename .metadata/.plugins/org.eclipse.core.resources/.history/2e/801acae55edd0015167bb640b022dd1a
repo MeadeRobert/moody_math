@@ -1,0 +1,57 @@
+
+public class Person {
+	public static final int[] ageRegionProbabilities = new int[] {0, 198, 198+69, 198+69+138, 198+69+138+265, 198+69+138+265+195, 198+69+138+265+195+76, 198+69+138+265+195+76+59};
+	public static final int[] genderRegions = new int[] {};
+	public static final int[] educationRegions = new int[]{};
+	
+	public int[] minutesDrivenPerDay;
+	public int[] milesDrivenPerDay;
+	
+	private int ageRegion;
+	private Gender gender;
+	private Education education;
+	
+	private enum Gender
+	{
+		Male, Female
+	}
+	
+	private enum Education
+	{
+		GradeSchool, HighSchool, Associates, Bachelors, Masters, Doctorate
+	}
+	
+	public Person()
+	{
+		int random = (int) (Math.random() * 1001);
+		System.out.println(random);
+		
+		for(int i = 0; i < ageRegionProbabilities.length - 1; i++)
+		{
+			if(random > ageRegionProbabilities[i] && random > ageRegionProbabilities[i+1])
+			{
+				ageRegion = i;
+				break;
+			}
+		}
+		System.out.println(ageRegion);
+		
+		
+		for(int i = 0; i < genderRegions.length - 1; i++)
+		{
+			
+		}
+	}
+	
+	public void drive()
+	{
+		
+	}
+	
+	public String toString()
+	{
+		return "[" + ageRegion + ", " +  gender + ", " + education + ", ";
+	}
+	
+	
+}

@@ -1,0 +1,13 @@
+
+public class Main {
+	Person[] people = new Person[10000];
+	int numDays = 10;
+	
+	for(int i = 0; i < numDays; i++)
+	{
+		for(int j = 0; j < people.length; j++)
+		{
+			
+		}
+	}
+}

@@ -1,0 +1,38 @@
+
+public class Person {
+	private static int[] ageRegionProbabilities = new int[] {};
+	
+	public int[] minutesDrivenPerDay;
+	public int[] milesDrivenPerDay;
+	
+	private int age;
+	private Gender gender;
+	private Education education;
+	
+	private enum Gender
+	{
+		Male, Female
+	}
+	
+	private enum Education
+	{
+		GradeSchool, HighSchool, Associates, Bachelors, Masters, Doctorate
+	}
+	
+	public Person()
+	{
+		
+	}
+	
+	public void drive()
+	{
+		
+	}
+	
+	public String toString()
+	{
+		return "[" + age + ", " +  gender + ", " + education + ", ";
+	}
+	
+	
+}

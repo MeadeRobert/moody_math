@@ -1,4 +1,25 @@
 
-public class Main {
+public class Main
+{
 
+	public static void main(String[] args)
+	{
+		
+		Person[] people = new Person[100];
+		for(int i = 0; i < people.length; i++)
+		{
+			people[i] = new Person();
+			System.out.println(people[i]);
+		}
+		
+		int numDays = 10;
+		
+		for(int i = 0; i < numDays; i++)
+		{
+			for(int j = 0; j < people.length; j++)
+			{
+				people[j].drive();
+			}
+		}
+	}
 }
