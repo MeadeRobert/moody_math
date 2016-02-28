@@ -19,7 +19,7 @@ public class Person {
 	
 	private enum Gender
 	{
-		Female, Male
+		Male, Female
 	}
 	
 	private enum Education
@@ -87,7 +87,6 @@ public class Person {
 	{
 		double[] data = new double[2];
 		data[0] = ((31.658* Math.pow(education.ordinal(), .4073)) + (1.2778 * Math.pow(age.ordinal(), 3) - 16.488 * Math.pow(age.ordinal(), 2) + 62.091 * age.ordinal() - 19) + (gender.ordinal() * 10 + 41)) / 3.0;
-		data[1] = ((-.8071 * Math.pow(education.ordinal(), 2)) + (.1812*Math.pow(age.ordinal(), 4) - 1.8292 * Math.pow(age.ordinal(), 3) + 2.4312*Math.pow(age.ordinal(), 2) + 14.585 * age.ordinal() + 4.25) + (8.7*gender.ordinal() + 24.9)) / 3.0;
 		return data;
 	}
 	
@@ -95,4 +94,20 @@ public class Person {
 	{
 		return "[" + age + ", " +  gender + ", " + education + "]";
 	}
+	
+	/**
+	* The printArray method prints an int[] array in the format [a,b,c,...,n]
+	* @param arr Array to print
+	*/
+	public static void printArray(int[] arr)
+	{
+		String output = "[";
+		for (int n : arr)
+		{
+			output += n + ",";
+		}
+		System.out.println(output.substring(0, output.length() - 1) + "]");
+	}
+	
+	
 }

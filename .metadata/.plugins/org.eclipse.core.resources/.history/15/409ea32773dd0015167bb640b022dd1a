@@ -10,7 +10,6 @@ public class Main
 		{
 			people[i] = new Person();
 			System.out.println(people[i]);
-			printArray(people[i].drive());
 		}
 		
 		
@@ -30,10 +29,10 @@ public class Main
 	* The printArray method prints an int[] array in the format [a,b,c,...,n]
 	* @param arr Array to print
 	*/
-	public static void printArray(double[] arr)
+	public static void printArray(int[] arr)
 	{
 		String output = "[";
-		for (double n : arr)
+		for (int n : arr)
 		{
 			output += n + ",";
 		}
